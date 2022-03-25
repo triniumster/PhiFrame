@@ -1,0 +1,23 @@
+/**
+ * @author Triniumster@System.Hardcore.PL
+ * @license X11 (2016) Use as is without any gwaranty 
+ * 
+ */
+
+#phiframe-messagebar { 
+    min-height: 1.55em;
+    width: auto;
+    display: block; 
+    padding: 4px; 
+    margin: 0;
+    border: 1px solid black; 
+    border-radius: 0.75mm;
+    position: absolute;
+    top: calc(4mm + 1.55em);
+    left: 2mm;
+    right: 2mm;
+    background: #FFF;
+    color: red;
+    text-align: center;
+    z-index: 999;
+}

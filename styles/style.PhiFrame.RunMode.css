@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 wrz 2021, 22:35:44
+    Author     : Triniumster
+*/
+
+#run_mode_name {
+    pointer-events: none;
+    position: absolute;
+    top: 1mm;
+    left: 1mm;
+    display: block;
+    z-index: 999999;
+    border: 2px solid black;
+    background: gold;
+    padding: 1mm;
+}

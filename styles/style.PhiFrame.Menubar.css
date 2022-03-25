@@ -1,0 +1,277 @@
+/**
+ * @author Triniumster@System.Hardcore.PL
+ * @license X11 (2016) Use as is without any waranty 
+ * 
+ */
+
+:root {
+    --mb-height: 1.57em;
+    --mb-main-color: #0A0;
+    --mb-hover-color: #909;
+    --mb-hover-text-color: #fff
+}
+
+/* GŁÓWNY PASEK MENU ======================================================== */
+
+#phiframe-menubar { 
+    height: var(--mb-height);
+    min-width: 200px;
+    width: auto;
+    display: block; 
+    padding: 0; 
+    margin: 0;  
+    border: 1px solid black; 
+    border-radius: 0.75mm;
+    position: absolute;
+    top: calc(2mm - 1px);
+    right: calc(2mm - 1px);
+    background: var(--mb-main-color);
+    color: black;
+    z-index: 999
+} 
+
+#phiframe-menubar > ul {
+    list-style:inside none; 
+    padding:0; 
+    margin:0;
+} 
+
+#phiframe-menubar > ul > li {
+    list-style:inside none; 
+    padding:0; 
+    margin:0; 
+    float:left; 
+    display:block; 
+    position:relative;
+}
+
+#phiframe-menubar > ul > li > a {
+    border-right: 1px solid;
+    border-color: #444;
+    color: black; /* kolor nazw g��wnych element�w menu */
+    outline: none; 
+    display: block; 
+    position: relative; 
+    padding: 3px 8px; /* odstep nazwy g��wnego elementu menu od g�ra-d� oraz lewo-prawo */
+    
+    text-decoration: none; 
+    text-align: center;
+}
+
+#phiframe-menubar > ul > li:last-of-type > a {
+    border: 0;
+    min-width: 4.5em
+}
+
+#phiframe-menubar > ul > li > a:after { 
+    content:''; 
+    position:absolute; 
+    top:0px; 
+    bottom:-1px; 
+    right:-2px; 
+    z-index:99; 
+} 
+
+/* w przypadku element�w g��wnych menu posiadaj�cych podmenu robimy dodatkowe 
+miejsce z prawej strony nazwy elementu na strza�eczk� informuj�c� o podmenu */
+#phiframe-menubar > ul > li.main-sub > a{  
+    padding-right: 20px; 
+}
+
+#phiframe-menubar ul li.main-sub:hover > a:after{
+    top:0; 
+    bottom:0;
+} 
+
+/* parametry straz�eczki w g��wnym elemencie menu przed najechaniem na element */
+#phiframe-menubar > ul > li.main-sub > a:before{ 
+    content:''; 
+    position:absolute; 
+    top: 50%; 
+    right:8px; 
+    border:5px solid transparent; 
+    border-top:5px solid black; 
+} 
+
+/* wyglad g��wnego elementu menu po najechaniu na podmenu */
+#phiframe-menubar ul li.main-sub:hover > a{ 
+    background: var(--mb-hover-color);
+    z-index:999; 
+    color: var(--mb-hover-text-color);
+} 
+
+#phiframe-menubar ul li.main-sub:hover > ul, #phiframe-menubar ul li.main-sub:hover > div{
+    display:block;
+} 
+
+/* wyglad głównego elementu menu po najechaniu */
+#phiframe-menubar > ul > li > a:hover {
+    background: var(--mb-hover-color);
+    color: var(--mb-hover-text-color);
+    z-index: 999;
+} 
+
+/* PODMENU STOPNIA ZEROWEGO ================================================= */
+
+/* wygl�d podmenu */
+#phiframe-menubar ul li > ul, #phiframe-menubar ul li > div { 
+    display: none; 
+    width: auto; 
+    position: absolute; 
+    top: var(--mb-height);
+    right: 0;
+    padding: 10px 0; 
+    border-radius: 0 0 5px 5px; 
+    z-index: 999; 
+    background: #666;
+    border: 1px solid black;
+}
+
+#phiframe-menubar ul li:last-child > ul, #phiframe-menubar ul li:last-child > div { 
+    right: -1px
+}
+
+#phiframe-menubar ul li > ul li {
+    display: block; 
+    list-style: inside none; 
+    padding: 0; 
+    margin: 0; 
+    position: relative;
+} 
+
+/* wygl�d element�w podmenu */
+#phiframe-menubar ul li > ul li a{ 
+    outline:none; 
+    display:block; 
+    position:relative; 
+    margin:0; 
+    padding:3px 8px; 
+    font: 0.8em Arial, Helvetica, sans-serif; 
+    color:#fff; 
+    text-decoration:none; 
+    text-shadow:1px 1px 0 rgba(0,0,0, 0.5); 
+}  
+
+/* wygl�d elementu podmenu po najechaniu */
+#phiframe-menubar > ul > li > ul > li a:hover, #phiframe-menubar > ul > li > div a:hover{
+    background: #110011;
+}
+
+/* wygl�d elementu podmenu po klikni�ciu */
+#phiframe-menubar > ul > li > ul > li a:active{
+    background: #110011;
+}
+
+/* wygl�d aktywnej opcji w podmenu po najechaniu */
+#phiframe-menubar > ul > li > ul > li a.selected:hover{
+    background: #909
+}
+
+/* wygl�d opcji w podmenu w stanie normalnym i po kliknieciu */
+#phiframe-menubar > ul > li > ul > li a.selected, #phiframe-menubar > ul > li > ul > li a.selected:active{
+    background: #099
+}
+
+/* wyglad nieaktywnego elementu podmenu */
+#phiframe-menubar > ul > li > ul > li a.disabled, #phiframe-menubar > ul > li > ul > li a.disabled:active, #phiframe-menubar > ul > li > ul > li a.disabled:hover{
+    background: none;
+    text-decoration: line-through;
+    color: #333;
+}
+
+/* PODMENU STOPNIA PIERWSZEGO =============================================== */
+
+/* w przypadku element�w g��wnych menu posiadaj�cych podmenu robimy dodatkowe 
+miejsce z prawej strony nazwy elementu na strza�eczk� informuj�c� o podmenu */
+#phiframe-menubar > ul > li > ul > li.next-sub > a{  
+    padding-left: 1.5em; 
+}
+
+/* parametry straz�eczki w g��wnym elemencie menu przed najechaniem na element */
+#phiframe-menubar > ul > li > ul > li.next-sub > a:before, #phiframe-menubar > ul > li > ul > li.next-sub-op > a:before{ 
+    content: ''; 
+    position:absolute; 
+    top: 25%; 
+    left:4px; 
+    border:5px solid transparent; 
+    border-right:5px solid #fff; 
+} 
+
+/* wyglad g��wnego elementu menu po najechaniu na podmenu */
+#phiframe-menubar ul li ul li.next-sub:hover > a{ 
+    background: #110011;
+    border-color:#111; 
+    z-index:999; 
+} 
+
+/* wyglad g��wnego elementu menu po najechaniu na podmenu */
+#phiframe-menubar ul li ul li.next-sub-op:hover > a{ 
+    background: #909;
+    border-color: #111; 
+    z-index:999; 
+} 
+
+#phiframe-menubar ul li ul li.next-sub:hover > ul, #phiframe-menubar ul li ul li.next-sub:hover > div, #phiframe-menubar ul li ul li.next-sub-op:hover > ul, #phiframe-menubar ul li ul li.next-sub-op:hover > div{
+    display: block;
+} 
+
+
+
+/* wygl�d podmenu */
+#phiframe-menubar ul li > ul li ul, #phiframe-menubar ul li ul li > div { 
+    display:none; 
+    width:auto; 
+    position:absolute; 
+    top:0px;
+    left: -80px;
+    padding:0; 
+    border-radius:4px 0 4px 4px; 
+    z-index:999; 
+    background: #333;
+} 
+
+/* wygl�d element�w podmenu */
+#phiframe-menubar ul li > ul li ul li a { 
+    outline:none; 
+    display:block; 
+    position:relative; 
+    margin:0; 
+    padding:3px 8px; 
+    font: 0.8em Arial, Helvetica, sans-serif; 
+    color:#fff; 
+    text-decoration:none; 
+    text-shadow:1px 1px 0 rgba(0,0,0, 0.5); 
+    border-radius:4px;
+}  
+
+/* wyglad elementu podmenu po najechaniu */
+/*#phiframe-menubar > ul > li > ul > li > ul > li a:hover{
+    background: #101;
+}*/
+
+/* wyglad elementu podmenu po klikni�ciu */
+#phiframe-menubar > ul > li > ul > li > ul > li a:active{
+    background: #101;
+}
+
+/* wyglad nieaktywnego elementu podmenu */
+#phiframe-menubar > ul > li > ul > li > ul > li a.disabled, #phiframe-menubar > ul > li > ul > li > ul > li a.disabled:active, #phiframe-menubar > ul > li > ul > li > ul > li a.disabled:hover{
+    background: none;
+    text-decoration: line-through;
+    color: #333;
+}
+
+/* wyglad wybranego elementu podmenu jako opcji */
+#phiframe-menubar > ul > li > ul > li > ul > li a.selected, #phiframe-menubar > ul > li > ul > li > ul > li a.selected:active{
+    background: #099;
+}
+
+#phiframe-menubar > ul > li > ul > li > ul > li a.selected:hover{
+    background: #909;
+}
+
+@media print {
+    #phiframe-menubar {
+        display: none;
+    }
+}

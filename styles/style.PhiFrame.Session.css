@@ -1,0 +1,143 @@
+/**
+ * @author Triniumster@System.Hardcore.PL
+ * @license X11 (2016) Use as is without any waranty 
+ * 
+ */
+
+.phiframe-loginform, .phiframe-passform {    
+    position: absolute;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+    padding: 0;
+    margin: 0;
+}
+
+.phiframe-passform {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.phiframe-loginform {
+    background-image: url("../images/bg.svg");
+    background-color: #FFF;
+    background-repeat: repeat;
+    background-size: 100px
+}
+
+.phiframe-session-formtable {
+    margin: 0;
+    margin-top: 15%;
+    border: 1px solid black;
+    border-radius: 1.1mm; 
+    background: white;
+    border-collapse: separate;
+    padding: 0;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.62);
+}
+
+.phiframe-session-formtable th {
+    background-color: #0A0;
+    border: 1px solid black;
+    text-align: center;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: bold;
+    border-radius: 0.75mm;
+}
+
+.phiframe-session-formtable .label {
+    text-align: right;
+    padding-left: 3mm
+}
+
+.phiframe-session-formtable .field {
+    text-align: left;
+    padding-right: 3mm
+}
+
+.phiframe-session-formtable .field > input {
+    font-size: 0.9em;
+}
+
+.phiframe-session-formtable .top {
+    padding-top: 3mm
+}
+
+.phiframe-session-formtable .cb {
+    text-align: center
+}
+
+.phiframe-session-formtable .btn {
+    padding-top: 3mm;
+    padding-bottom: 3mm
+}
+
+.phiframe-session-formtable .btn > input {
+    width: 2cm;
+    font-size: 0.9em;
+}
+
+/* LIGHT LOGIN AND PASSWORD FORM VERSION */
+
+.phiframe-loginform-light, .phiframe-passform-light {    
+    position: absolute;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    bottom: 0;
+    z-index: 998;
+    padding: 0;
+    margin: 0;
+    background: #EFEFEF;
+}
+
+.phiframe-session-formtable-light {
+    margin: 0;
+    margin-top: 15%;
+}
+
+.phiframe-session-formtable-light th {
+    display: none;
+}
+
+.phiframe-session-formtable-light .label {
+    text-align: right;
+    padding-left: 3mm
+}
+
+.phiframe-session-formtable-light .field {
+    text-align: left;
+    padding-right: 3mm
+}
+
+.phiframe-session-formtable-light .field > input {
+    font-size: 0.9em;
+    border: 1px solid #777
+}
+
+.phiframe-session-formtable-light .remember {
+    display: none
+}
+
+.phiframe-session-formtable-light .top {
+    padding-top: 3mm
+}
+
+.phiframe-session-formtable-light .cb {
+    text-align: center
+}
+
+.phiframe-session-formtable-light .btn {
+    padding-top: 18mm;
+    padding-bottom: 3mm;
+    
+}
+
+.phiframe-session-formtable-light .btn > input {
+    width: 2cm;
+    font-size: 0.9em;
+}

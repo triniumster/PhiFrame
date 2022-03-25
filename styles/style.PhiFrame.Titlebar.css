@@ -1,0 +1,50 @@
+/**
+ * @author Triniumster@System.Hardcore.PL
+ * @license X11 (2016) Use as is without any gwaranty 
+ * 
+ */
+
+#phiframe-titlebar {
+    height: 1.57em;
+    width: auto;
+    display: block; 
+    margin: 0;  
+    padding: 0;
+    border: 1px solid black; 
+    border-radius: 0.75mm;
+    position: absolute;
+    top: calc(2mm - 1px);
+    left: calc(2mm - 1px);
+    background: #0A0;
+    color: black;
+    z-index: 999
+}
+
+#phiframe-titlebar > p {
+    padding: 0;
+    margin: 0.64mm 2mm;
+    font-weight: bold;
+}
+
+#phiframe-titlebar.ie {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 99.8%;
+}
+
+#phiframe-titlebar.ie > p {
+    text-align: center
+}
+
+@media print {
+    #phiframe-titlebar {
+        top: 0;
+        left: 0;
+        width: 99.8%;
+    }
+
+    #phiframe-titlebar > p {
+        text-align: center
+    }
+}

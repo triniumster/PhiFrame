@@ -1,0 +1,93 @@
+
+#phiframe-modalPopup, .phiframe-modalPopup {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%; 
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 100000;
+    -webkit-filter: grayscale(0%) !important;
+    filter: grayscale(0%) !important;
+}
+
+.phiframe-grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.fieldError {
+    background-color: red !important;
+    color: white !important;
+}
+
+.infoField {
+    display: block;
+    color: red;
+    background-color: black;
+}
+
+.infoField:empty {
+    display: none;
+}
+
+.phiframe-popup-content-frame {
+    display: inline-block;
+    min-width: 7cm;
+    max-width: 80%;
+    border: 3px solid black;
+    border-radius: 2mm;
+    overflow-y: auto;
+    min-height: 3cm;
+    max-height: 25cm;
+    background-color: white;
+    padding-left: 3mm;
+    padding-right: 3mm;
+}
+
+.phiframe-popup-content-frame-b {
+     position: relative;
+     top: 50%;
+     left: 50%;
+     transform: translateY(-50%) translateX(-50%);
+}
+
+#phiframe-popup-content-title {
+    width: 90%;
+    padding: 3mm;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    margin-bottom: 3mm
+}
+
+.phiframe-popup-title {
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap
+}
+
+.abc0 {
+    text-align: right
+}
+
+.abc1 {
+    position: relative;
+    left: -1px;
+    width: calc(98% + 1px);
+    background-color: yellow;
+    border: 1px solid black
+}
+
+.yellowBox {
+    border: 1px solid black;
+    background: #FF0;
+    border-radius: 3px
+}
+
+.yellowBox:disabled {
+    border: 1px solid black ! important;
+    background: lightgray ! important;
+}
+
